@@ -1,0 +1,25 @@
+version: '2.1'
+services:
+  web:
+    build: 
+        context: .
+        dockerfile: Web.dockerfile
+    depends_on:
+      - db
+  db:
+    build:
+        context: .
+        dockerfile: Sql.dockerfile
+    environment:
+      sa_password: "JeRf5P7uw0"
+      ACCEPT_EULA: "y"
+    networks:
+      default:
+        ipv4_address: 172.18.209.1
+        aliases:
+          - db
+    
+networks:
+  default:
+    external:
+      name: nat
