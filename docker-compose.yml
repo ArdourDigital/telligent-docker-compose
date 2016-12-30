@@ -12,6 +12,15 @@ services:
         dockerfile: JobServer.dockerfile
     depends_on:
       - db
+  socket-message-bus:
+    build: 
+        context: .
+        dockerfile: SocketMessageBus.dockerfile
+    networks:
+      default:
+        ipv4_address: 172.18.209.3
+        aliases:
+          - socket-message-bus
   db:
     build:
         context: .
