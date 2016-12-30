@@ -6,6 +6,12 @@ services:
         dockerfile: Web.dockerfile
     depends_on:
       - db
+  job-server:
+    build: 
+        context: .
+        dockerfile: JobServer.dockerfile
+    depends_on:
+      - db
   db:
     build:
         context: .
