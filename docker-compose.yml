@@ -21,6 +21,15 @@ services:
         ipv4_address: 172.18.209.3
         aliases:
           - socket-message-bus
+  search:
+    build:
+        context: .
+        dockerfile: Search.dockerfile
+    networks:
+      default:
+        ipv4_address: 172.18.209.2
+        aliases:
+          - search
   db:
     build:
         context: .
