@@ -120,3 +120,9 @@ A SQL Password has been hardcoded in the `docker-compose.yml`, as this is intend
 The password should be updated in the `docker-compose.yml` file and in the `connectionstrings.config` file used by the Website and Job Service.
 
 The password must meet the requirements set out in [this MSDN article](https://msdn.microsoft.com/en-us/library/ms161959.aspx).
+
+### Telligent Password
+
+The Telligent admin password has been hardcoded to `password`, as this is intended for use only on local development machines. If you are extending this to a wider network you should set your own password.
+
+The password can be changed in the `Sql.dockerfile` where the community is initialized.
