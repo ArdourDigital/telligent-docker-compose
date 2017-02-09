@@ -18,7 +18,7 @@ services:
         dockerfile: SocketMessageBus.dockerfile
     networks:
       default:
-        ipv4_address: 172.18.209.3
+        ipv4_address: 172.22.79.3
         aliases:
           - socket-message-bus
   search:
@@ -27,7 +27,7 @@ services:
         dockerfile: Search.dockerfile
     networks:
       default:
-        ipv4_address: 172.18.209.2
+        ipv4_address: 172.22.79.2
         aliases:
           - search
   db:
@@ -39,7 +39,7 @@ services:
       ACCEPT_EULA: "y"
     networks:
       default:
-        ipv4_address: 172.18.209.1
+        ipv4_address: 172.22.79.1
         aliases:
           - db
     
